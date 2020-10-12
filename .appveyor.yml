@@ -116,7 +116,7 @@ build_script:
 deploy:
   provider: GitHub
   auth_token:
-    secure: mfNFJ47dV/0CNpg156CiHuK3t6VUNCVhAIYNVkJfwjwY0dbhD1kIdMPfTMdarCnz
+    secure: paAKarzJ9QvXzzCOfkdILl6oDFyk179xnxl3oEECFfmSVSuieHM4Z0wr6jDxKMR5
   artifact: c:\projects\DynamoRIO\DynamoRIO.zip
   draft: false
   prerelease: false
