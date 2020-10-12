@@ -107,12 +107,12 @@ build_script:
   - c:\cygwin\bin\perl ../suite/runsuite_wrapper.pl travis use_ninja %EXTRA_ARGS%
   - cd ..\
   - 7z a DynamoRIO.zip build
+  - set appveyor_repo_tag=true
 # Automated deployment of builds to GitHub Releases.
 # We rely on a Travis cron job to push a tag to the repo which then
 # triggers this deployment.
 # We switch to package.cmake for these builds in runsuite_wrapper.pl by looking
 # for $APPVEYOR_REPO_TAG=="true".
-   - set appveyor_repo_tag=true
 deploy:
   provider: GitHub
   auth_token:
