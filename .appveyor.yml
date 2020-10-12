@@ -112,6 +112,7 @@ build_script:
 # triggers this deployment.
 # We switch to package.cmake for these builds in runsuite_wrapper.pl by looking
 # for $APPVEYOR_REPO_TAG=="true".
+    appveyor_repo_tag: true
 deploy:
   provider: GitHub
   auth_token:
