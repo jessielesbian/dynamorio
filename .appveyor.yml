@@ -106,7 +106,7 @@ build_script:
   # The perl in c:\perl can't open a pipe so we use cygwin perl.
   - c:\cygwin\bin\perl ../suite/runsuite_wrapper.pl travis use_ninja %EXTRA_ARGS%
   - cd ..\
-  - 7z a DynamoRIO.zip build
+  - 7z a DynamoRIO.zip -slp build
   - set appveyor_repo_tag=true
 # Automated deployment of builds to GitHub Releases.
 # We rely on a Travis cron job to push a tag to the repo which then
