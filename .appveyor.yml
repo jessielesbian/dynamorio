@@ -105,16 +105,14 @@ build_script:
   - echo %PATH%
   # The perl in c:\perl can't open a pipe so we use cygwin perl.
   - c:\cygwin\bin\perl ../suite/runsuite_wrapper.pl travis use_ninja %EXTRA_ARGS%
-
+  - cd c:\projects
+  - 7z a DynamoRIO.zip DynamoRIO
 # Automated deployment of builds to GitHub Releases.
 # We rely on a Travis cron job to push a tag to the repo which then
 # triggers this deployment.
 # We switch to package.cmake for these builds in runsuite_wrapper.pl by looking
 # for $APPVEYOR_REPO_TAG=="true".
 deploy:
-
-  - cd c:\projects
-  - 7z a DynamoRIO.zip c:\DynamoRIO\
   provider: GitHub
   auth_token:
     secure: mfNFJ47dV/0CNpg156CiHuK3t6VUNCVhAIYNVkJfwjwY0dbhD1kIdMPfTMdarCnz
